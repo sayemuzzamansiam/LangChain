@@ -21,15 +21,15 @@ documents = [
 
 query = "Tell me about Mustafiz"
 
-doc_em = embedding.embed_documents(documents)
+doc_em = embedding.embed_documents(documents) # embedding the doc
 
-query_em = embedding.embed_query(query)
+query_em = embedding.embed_query(query) # embedding the query 
 
-scores = cosine_similarity([query_em],doc_em)[0]
+scores = cosine_similarity([query_em],doc_em)[0] # finding similarity between doc and query to get the answer 
 
 print(scores)
 
-print(sorted(list(enumerate(scores)),key=lambda x:x[1])[-1])
+print(sorted(list(enumerate(scores)),key=lambda x:x[1])[-1]) # assigning index to get the most similar text from the embedded value.
 
 index, score = sorted(list(enumerate(scores)),key=lambda x:x[1])[-1]
 
