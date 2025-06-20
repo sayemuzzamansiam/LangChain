@@ -1,0 +1,15 @@
+myenv/
+.env
+# Ignore Python bytecode files
+__pycache__/    
+*.py[cod]
+
+
+*.pyc
+*.pyo
+*.pyd
+build/
+dist/
+*.egg-info/
+*.log
+*.log.*
